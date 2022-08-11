@@ -1,0 +1,277 @@
+/* -------------------網頁基本設定---------------------------------------------*/
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#container2{
+    background-color: white;
+    overflow: hidden;
+}
+
+
+
+/* -------------------輪播圖---------------------------------------------------------*/
+
+@keyframes carouselAnimation{
+    from{
+        opacity: 0.8;
+        transform:scale(1.2,1.2); 
+    }
+    to{
+        opacity: 1;
+        transform:scale(1,1);
+    }
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slider li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes firstLiOpacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.slider li:first-child{
+    display: block;
+}
+
+.FirstLiClass{
+    opacity: 0;
+    animation: firstLiOpacity 2.5s linear 2s 1;
+    animation-fill-mode:forwards; 
+}
+
+.img-size{
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; 
+    animation: carouselAnimation 13s linear; 
+}
+
+
+
+/* -------------------輪播圖控制元件-----------------------------------------------------*/
+
+.arrow{
+    width: 4%;
+    height: 1%;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+.arrow-right,
+.arrow-left{
+    width: 1%;
+    height: 1%;
+    opacity: 0;
+}
+
+.arrow-right{
+    float: right;
+}
+
+.arrow-left{
+    float: right;
+}
+
+
+
+/* -------------------輪播圖控制元件-----------------------------------------------------*/
+
+.fade-in-words{
+    position: absolute;
+    width: 90%;
+    top: 51%;
+    left: 5%;
+    z-index: 2;
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+}
+
+
+
+/* -------------------商標名稱(飛入效果)-------------------------------------------------*/
+
+@keyframes fade-in{  
+    0%{ 
+        opacity: 0;
+        transform:scale(3,3); 
+    }
+    100%{
+        opacity:1;
+        transform:scale(1,1); 
+    }
+}
+
+.fade-in-words>ul>li{
+    display: inline-block;
+}
+
+.first-words{ 
+    opacity: 0;   
+    animation: fade-in 1.2s ease 0.5s 1;
+    animation-fill-mode:forwards;
+    margin: 0 3px;
+ }
+
+.second-words{ 
+    opacity: 0;    
+    animation: fade-in 1s ease 1.1s 1;
+    animation-fill-mode:forwards;
+    margin: 0 3px;
+ }
+
+.third-words{ 
+    opacity: 0;    
+    animation: fade-in 1.6s ease 0.7s 1;
+    animation-fill-mode:forwards;
+    margin: 0 3px;
+ }
+
+.four-words{ 
+    opacity: 0;    
+    animation: fade-in 1.3s ease 1.3s 1;
+    animation-fill-mode:forwards;
+    margin: 0 3px;
+ }
+
+.five-words{ 
+    opacity: 0;    
+    animation: fade-in 0.8s ease 0.8s 1;
+    animation-fill-mode:forwards;
+    margin: 0 3px;
+ }
+
+
+
+/* -------------------進入按鈕-------------------------------------------------*/
+
+@keyframes infoTop{  
+    0%{ 
+        top: 95%;
+    }
+    100%{
+        top: 91%;
+    }
+}
+
+#info{
+
+    width: 4.6vmax;
+    height: 4vmin;
+    font-weight: 500;
+    position: absolute;
+    top: 95%;
+    left: 48%;  
+    animation: infoTop 0.5s linear 1.8s;
+    animation-fill-mode:forwards;
+    line-height:4vmin;
+    text-align:center;
+    overflow: hidden;
+    opacity: 0;
+    cursor:pointer;
+}
+
+#black-line{
+    width: 10vmax;
+    height: 0.6vmin;
+    position: absolute;
+    top: 97%;
+    left: -280%;
+    background-color: black;   
+    border-radius: 25%;
+}
+
+
+
+/* -------------------網頁文字大小(自動調整)---------------------------------------------*/
+
+.fontSize {
+  font-size: 1.2rem;
+}
+
+.fontSizeS {
+  font-size: 1rem;
+}
+
+@media (min-width: 601px){
+
+  .fontSize {
+      font-size: 1.6rem;
+  }
+
+  .fontSizeS {
+      font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1001px){
+
+  .fontSize {
+      font-size: 2rem;
+  }
+
+  .fontSizeS {
+      font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1401px) {
+
+  .fontSize {
+      font-size: 2.2rem;
+    }
+
+  .fontSizeS {
+      font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 1801px) {
+
+  .fontSize {
+     font-size: 2.4rem;
+  }
+
+  .fontSizeS {
+     font-size: 1.6rem;
+}
+}
+
+
+
+/* -------------------跳轉至page1的過場動畫---------------------------------------------*/
+
+.ToPag1{
+    position: absolute;
+    z-index: 3;
+}
