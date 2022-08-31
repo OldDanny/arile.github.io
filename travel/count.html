@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花組專用</title>
+
+</head>
+<body>
+
+    <style>
+
+       .mySection{
+            width: 95vw;
+            min-width: 800;
+            height: 100vh;
+            margin: auto;
+        }
+        
+        .leftKey,.rightKey{
+            width:20%;
+            height: 100%;
+            float:left;
+        }
+
+        .main{
+            width: 60%;
+            height: 100%;
+            background-color: black;
+            float:left;
+        }
+
+        .myButtom{
+            width: 100%;
+            height: 100%;
+            font-size: 200px;
+            background-color: green;
+        }
+
+        #demo{
+            width:100%;
+            height:600px;
+            line-height: 600px;
+            margin:auto;
+            text-align: center;
+            font-size: 500px;
+            font-weight;bold;
+            color: white;
+        }
+
+    </style>
+
+    <section class="mySection">
+
+        <div class="leftKey"> 
+            <button class="myButtom" onclick="minusOne()">-</button>
+        </div>
+
+        <div class="main">
+
+            <div id="demo">
+
+            </div>
+
+            <div>
+
+            </div>
+            
+        </div>
+
+        <div class="rightKey">
+            <button class="myButtom" onclick="addOne()">+</button>
+        </div>
+
+    </section>
+    
+        
+
+    <script>
+
+        let demo = document.getElementById("demo");
+
+        let num =0;
+
+        function addOne(){
+
+            if(num < 9){
+                num = num + 1;
+                demo.innerHTML = num;
+            }else{
+                alert("求婚成功");
+            }
+           
+        }
+
+        function minusOne(){
+
+            if(num > 0){
+                num = num - 1;
+                demo.innerHTML = num;
+            }else if(num == 0){
+               console.log("數值不可小於零")
+            }
+        }
+
+
+        demo.innerHTML = num;
+
+       
+
+    </script>
+</body>
+</html>
