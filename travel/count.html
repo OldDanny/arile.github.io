@@ -73,8 +73,8 @@
 
             </div>
 
-            <button id="names">      
-                準備
+            <button id="names" onclick="start()">      
+                開始
             </button>
             
         </div>
@@ -104,7 +104,7 @@
 
             switch (num) {
                 case 0:
-                names.innerHTML = "準備";
+                names.innerHTML = "開始";
                 break;
 
                 case 1:
@@ -159,7 +159,7 @@
 
             switch (num) {
                 case 0:
-                names.innerHTML = "準備";
+                names.innerHTML = "開始";
                 break;
 
                 case 1:
@@ -203,7 +203,11 @@
             }
         }
 
-        setInterval(addOne, 15000);
+        function start(){
+            setInterval(addOne, 15000);
+        }
+
+        
         
 
         demo.innerHTML = num;
